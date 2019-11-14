@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # set up ssh secrets
-SSH_PATH="~/.ssh"
+SSH_PATH="$HOME/.ssh"
 mkdir "$SSH_PATH"
 echo "$KEY" > "$SSH_PATH/key"
 chmod 700 "$SSH_PATH"
