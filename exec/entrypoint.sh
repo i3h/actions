@@ -8,4 +8,4 @@ chmod 700 "$SSH_PATH"
 chmod 600 "$SSH_PATH/key"
 
 # execute command on remote server
-sh -c "ssh -i $SSH_PATH/key -o StrictHostKeyChecking=no $USERNAME@$SERVER $*"
+sh -c "ssh -i $SSH_PATH/key -o StrictHostKeyChecking=no $USERNAME@$SERVER '$COMMAND'"
