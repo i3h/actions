@@ -1,13 +1,11 @@
-## rsync
+## exec
 
 ```
-- name: rsync to remote server
-  uses: noobly314/actions/rsync@master
+- name: execute command on remote server
+  uses: noobly314/actions/exec@master
   env:
     SERVER: YOUR_SERVER
     USERNAME: YOUR_USERNAME
-    SRC: SOURCE_DIRECTORY
-    DEST: DESTINATION_DIRECTORY
     KEY: PRIVATE_KEY
-
+    COMMAND: YOUR_COMMAND
 ```
