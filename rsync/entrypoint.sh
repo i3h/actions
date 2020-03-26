@@ -10,4 +10,4 @@ chmod 600 $SSH_PATH/key
 chmod 600 $SSH_PATH/proxy_key
 
 # rsync to remote server
-sh -c `rsync -v -a --progress --delete -e "ssh -o StrictHostKeyChecking=no -o ProxyCommand='ssh -o StrictHostKeyChecking=no -W %h:%p -i $SSH_PATH/proxy_key ${PROXY_USERNAME}@${PROXY_SERVER}' -i ${SSH_PATH}/key" $SRC $USERNAME@$SERVER:$DEST`
+rsync -v -a --progress --delete -e "ssh -o StrictHostKeyChecking=no -o ProxyCommand='ssh -o StrictHostKeyChecking=no -W %h:%p -i $SSH_PATH/proxy_key ${PROXY_USERNAME}@${PROXY_SERVER}' -i ${SSH_PATH}/key" $SRC $USERNAME@$SERVER:$DEST
