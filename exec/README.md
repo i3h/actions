@@ -2,7 +2,7 @@
 
 ```
 - name: execute command on remote server
-  uses: noobly314/actions/exec@master
+  uses: noobly314/actions/exec
   env:
     SERVER: YOUR_SERVER
     USERNAME: YOUR_USERNAME
