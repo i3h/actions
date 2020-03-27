@@ -1,5 +1,5 @@
 #!/bin/bash
-if [ "$VERSION" == "latest" ]
+if [ "$VERSION" == "latest" ]; then
 	URL=https://github.com/$REPOSITORY/releases/latest/download/$FILE
 else
 	URL=https://github.com/$REPOSITORY/releases/download/$VERSION/$FILE
