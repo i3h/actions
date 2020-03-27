@@ -5,10 +5,10 @@ else
 	URL=https://github.com/$REPOSITORY/releases/download/$VERSION/$FILE
 fi
 
-if [ -z "$TOKEN" ]; then
+if [ -z "$GITHUB_PAT" ]; then
 	HEADER=""
 else
-	HEADER="Authorization: token $TOKEN"
+	HEADER="Authorization: token $GITHUB_PAT"
 fi
 
 wget --header=$HEADER -O $FILE $URL
