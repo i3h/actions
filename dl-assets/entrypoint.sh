@@ -4,4 +4,11 @@ if [ "$VERSION" == "latest" ]; then
 else
 	URL=https://github.com/$REPOSITORY/releases/download/$VERSION/$FILE
 fi
-wget -O $FILE $URL
+
+if [ -z "$TOKEN" ]; then
+	HEADER=""
+else
+	HEADER="Authorization: token $TOKEN"
+fi
+
+wget --header=$HEADER -O $FILE $URL
