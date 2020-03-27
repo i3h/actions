@@ -11,4 +11,4 @@ else
 	HEADER="Authorization: token $GITHUB_PAT"
 fi
 
-wget --header=$HEADER -O $FILE $URL
+wget --header="$HEADER" -O $FILE $URL
